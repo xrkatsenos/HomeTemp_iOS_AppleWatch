@@ -12,15 +12,21 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var lblTemp: WKInterfaceLabel!
+    @IBOutlet weak var lblHumidity: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+            print(1)
+        lblTemp.setText("22")
         // Configure interface objects here.
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        print(2)
+
     }
     
     override func didDeactivate() {
